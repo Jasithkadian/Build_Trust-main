@@ -20,7 +20,6 @@ backend/list_models.py
 backend/send_sample_email.py
 backend/migrate.py
 backend/agent_poc.py
-backend/local_users.json
 
 # Large datasets / CSVs
 *.csv

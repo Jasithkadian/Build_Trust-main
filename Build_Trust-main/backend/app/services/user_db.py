@@ -7,20 +7,29 @@ class UserDB:
         self.users = self._load_users()
 
     def _load_users(self):
-        # Check /tmp first, then default path
+        users = {}
+        # 1. Load packaged users (default)
+        packaged_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../local_users.json'))
+        if os.path.exists(packaged_path):
+            try:
+                with open(packaged_path, 'r') as f:
+                    data = json.load(f)
+                    if data:
+                        users.update(data)
+            except:
+                pass
+                
+        # 2. Load /tmp users (session updates) and merge
         tmp_path = '/tmp/local_users.json'
-        for path in [tmp_path, self.file_path]:
-            if os.path.exists(path):
-                try:
-                    with open(path, 'r') as f:
-                        data = json.load(f)
-                        if data:
-                            # If we successfully read from a path, pin that path for saving if writable
-                            self.file_path = path
-                            return data
-                except:
-                    pass
-        return {}
+        if os.path.exists(tmp_path):
+            try:
+                with open(tmp_path, 'r') as f:
+                    data = json.load(f)
+                    if data:
+                        users.update(data)
+            except:
+                pass
+        return users
 
     def _save_users(self):
         try:

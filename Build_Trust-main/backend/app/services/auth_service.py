@@ -23,6 +23,7 @@ class AuthService:
             
         self.resend_key = os.getenv("RESEND_API_KEY")
         self.email_configured = bool(self.resend_key)
+        self.local_otps = {} # In-memory OTP store when Dataverse is offline
         
         if self.email_configured:
             resend.api_key = self.resend_key
@@ -77,6 +78,9 @@ class AuthService:
             except Exception as e:
                 print(f"❌ Failed to save OTP to Dataverse: {e}")
                 raise Exception("Identity service temporarily unavailable. Please try again.")
+        else:
+            # Store in local in-memory fallback
+            self.local_otps[email.lower().strip()] = (code, expiry)
 
         # 3. REAL EMAILER: Send via Resend (Domain Verified!)
         if self.email_configured:
@@ -146,8 +150,19 @@ class AuthService:
         print("="*40 + "\n")
 
     async def verify_otp(self, email: str, code: str):
+        email_clean = email.lower().strip()
         if not dataverse_service.configured:
-            return False, "Dataverse connection required for verification"
+            # Local mock validation
+            if email_clean in self.local_otps:
+                stored_code, expiry = self.local_otps[email_clean]
+                if datetime.datetime.utcnow() > expiry:
+                    return False, "Code has expired"
+                if stored_code == code:
+                    # Clear code after successful use
+                    del self.local_otps[email_clean]
+                    token = self.create_access_token(email)
+                    return True, token
+            return False, "Invalid or expired code"
 
         try:
             # Query for the latest valid code for this email
