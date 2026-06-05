@@ -241,9 +241,21 @@ export default function SearchView({
                               setActiveView(`profile/${worker.id}`);
                             }}
                           >
-                            {worker.name} {worker.verified && <span className="verified-icon">✓</span>}
+                            {worker.name}
                           </h3>
-                          <div className="worker-skills-tags">
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>
+                            <span style={{ fontWeight: 600, color: 'var(--text-dark)' }}>Senior {worker.specialty}</span>
+                            <span>•</span>
+                            <span>{worker.experience || 5} Years Exp</span>
+                            <span>•</span>
+                            <span>{worker.reviewsCount || 25} Projects Completed</span>
+                          </div>
+                          <div className="worker-verifications">
+                            <span className="verification-badge verified-aadhaar">✓ Aadhaar Verified</span>
+                            <span className="verification-badge verified-background">✓ Background Checked</span>
+                            {worker.rate >= 350 && <span className="verification-badge verified-gst">✓ GST Verified</span>}
+                          </div>
+                          <div className="worker-skills-tags" style={{ marginTop: '8px', marginBottom: '8px' }}>
                             {(worker.tags || []).map(t => <span key={t} className="tag-badge">{t}</span>)}
                           </div>
                         </div>

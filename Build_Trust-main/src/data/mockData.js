@@ -1,4 +1,4 @@
-// BuildTrust Indian-Origin Mock Database
+// Verada Indian-Origin Mock Database
 
 export const initialWorkers = [
   {

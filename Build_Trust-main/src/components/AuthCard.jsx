@@ -170,7 +170,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
       const res = await fetch(`${API_BASE}/api/auth/login-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: 'admin@buildtrust.com', password: '1234@' })
+        body: JSON.stringify({ email: 'admin@verada.com', password: '1234@' })
       });
       const data = await res.json();
       if (res.ok && data.status === 'success') {
@@ -303,7 +303,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
         {mode === 'signup' && (
           <form className="auth-step-pane" onSubmit={handleRegister}>
             <p className="auth-subtitle">
-              Enter your details below to register a new account on Build_Trust.
+              Enter your details below to register a new account on Verada.
             </p>
             
             <div className="auth-group">

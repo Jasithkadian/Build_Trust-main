@@ -12,7 +12,7 @@ from app.services.dataverse_service import dataverse_service
 
 async def main():
     print("========================================")
-    print("👷 Build_Trust AI Agent POC (Terminal)")
+    print("👷 Verada AI Agent POC (Terminal)")
     print("========================================\n")
     
     if not ai_service.configured:
@@ -22,7 +22,7 @@ async def main():
         print("❌ Dataverse is not configured.")
         return
 
-    print("Agent: Namaste! I am the Build_Trust Project Manager. What kind of construction or repair work do you need today?")
+    print("Agent: Namaste! I am the Verada Project Manager. What kind of construction or repair work do you need today?")
     
     messages = [
         {
@@ -67,8 +67,8 @@ async def main():
             
             headers = {
                 "Authorization": f"Bearer {ai_service.api_key}",
-                "HTTP-Referer": "https://buildtrust.me",
-                "X-Title": "Build_Trust CRM",
+                "HTTP-Referer": "https://verada.me",
+                "X-Title": "Verada CRM",
                 "Content-Type": "application/json"
             }
 

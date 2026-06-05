@@ -66,7 +66,7 @@ export default function LandingView({
 
   const faqs = [
     {
-      q: "How does Build_Trust verify specialists?",
+      q: "How does Verada verify specialists?",
       a: "Every tradesperson on our platform undergoes a thorough verification process. This includes national identity verification, trade license checks, background checks, and standard skills assessments to ensure quality craftsmanship."
     },
     {
@@ -93,7 +93,7 @@ export default function LandingView({
                   <svg viewBox="0 0 24 24" width="18" height="18" className="tab-icon">
                     <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
                   </svg>
-                  AI Project Scoper
+                  Project Planner
                 </button>
                 <button 
                   className={`tab-btn ${activeTab === 'search' ? 'active' : ''}`}
@@ -106,11 +106,11 @@ export default function LandingView({
                 </button>
               </div>
 
-              {/* Tab Panel: AI Scoper Form */}
+              {/* Tab Panel: Project Planner Form */}
               {activeTab === 'ai' && (
                 <form className="widget-form animate-fade" onSubmit={handleAiSubmit}>
-                  <h2>Request a specialist for now or later</h2>
-                  <span className="promo-badge">🛡️ Upfront AI estimates & 100% verified trade professionals.</span>
+                  <h2>Find the right professional for your project</h2>
+                  <span className="promo-badge">🛡️ Instant project estimates and verified local professionals.</span>
                   
                   <div className="widget-inputs-wrap">
                     <div className="vertical-timeline-line">
@@ -236,27 +236,27 @@ export default function LandingView({
       <section className="stats-strip-landing">
         <div className="container stats-container-landing">
           <div className="stat-card-landing">
-            <h3>150+</h3>
-            <p>Completed Projects</p>
+            <h3>10,000+</h3>
+            <p>Verified Professionals</p>
           </div>
           <div className="stat-card-landing">
-            <h3>₹5 Lakhs+</h3>
-            <p>Protected Payments</p>
+            <h3>2,500+</h3>
+            <p>Projects Completed</p>
           </div>
           <div className="stat-card-landing">
-            <h3>50+</h3>
-            <p>Verified Specialists</p>
+            <h3>4.8★</h3>
+            <p>Average Customer Rating</p>
           </div>
           <div className="stat-card-landing">
-            <h3>4.9★</h3>
-            <p>Average Rating</p>
+            <h3>Delhi NCR</h3>
+            <p>Available Across NCR</p>
           </div>
         </div>
       </section>
 
       {/* 3. EXPLORE SERVICES SECTION (Uber Grid Style) */}
       <section className="explore-services-section container">
-        <h2 className="section-title">Explore what you can build with Build_Trust</h2>
+        <h2 className="section-title">Explore what you can build with Verada</h2>
         <p className="section-subtitle">Vetted local specialists ready to deploy for any project scope.</p>
         
         <div className="explore-grid">
@@ -332,7 +332,7 @@ export default function LandingView({
                 <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
               </svg>
             </div>
-            <h3>AI Cost Audit</h3>
+            <h3>Project Cost Review</h3>
             <p>Comprehensive scoping, materials estimation, and average NCR trade pricing audits.</p>
             <button className="btn-details-link" onClick={onOpenAiTool}>
               Details &gt;
@@ -346,7 +346,7 @@ export default function LandingView({
       <section className="escrow-membership-section container">
         <div className="escrow-membership-banner">
           <div className="membership-left">
-            <h2>Build_Trust Secure Escrow</h2>
+            <h2>Verada Secure Escrow</h2>
             <p>100% financial protection. Milestone payments are held in secure escrow and released only after you sign off on work completion.</p>
             <button className="btn btn-outline" onClick={onOpenPostJob}>Post a Job Requirements</button>
           </div>
@@ -367,7 +367,7 @@ export default function LandingView({
         <div className="reserve-wrapper">
           {/* Left Block: Date/Time Picker Form */}
           <div className="reserve-form-box">
-            <h3>Get your specialist scheduled with Build_Trust Reserve</h3>
+            <h3>Get your specialist scheduled with Verada Reserve</h3>
             <form onSubmit={handleReserveSubmit}>
               <div className="form-group-reserve">
                 <label>Preferred Project Date</label>
@@ -429,7 +429,7 @@ export default function LandingView({
 
       {/* 6. HOW IT WORKS SECTION */}
       <section className="how-it-works container">
-        <h2 className="section-title">How Build_Trust Works</h2>
+        <h2 className="section-title">How Verada Works</h2>
         <p className="section-subtitle">Secure, transparent, and verified hiring in three simple steps.</p>
         <div className="how-steps-grid">
           <div className="how-step-card">
@@ -446,6 +446,76 @@ export default function LandingView({
             <div className="step-badge">3</div>
             <h4>Secure & Book</h4>
             <p>Fund escrow to lock your slot. Payment is released only after you approve the completed work.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST SIGNALS SECTION */}
+      <section className="trust-signals-section">
+        <div className="container">
+          <h2 className="section-title">The Verada Trust Guarantee</h2>
+          <p className="section-subtitle">Every professional is vetted, and every payment is protected to ensure stress-free projects.</p>
+          
+          <div className="trust-signals-grid">
+            <div className="trust-signal-card">
+              <div className="trust-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+              </div>
+              <h4>Verified Identity</h4>
+              <p>Government ID and trade credentials verified for every professional.</p>
+            </div>
+            
+            <div className="trust-signal-card">
+              <div className="trust-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <h4>Background Checked</h4>
+              <p>Rigorous criminal and reference checks performed regularly.</p>
+            </div>
+
+            <div className="trust-signal-card">
+              <div className="trust-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                </svg>
+              </div>
+              <h4>Payment Protection</h4>
+              <p>Escrow payments hold your funds securely until milestones are approved.</p>
+            </div>
+
+            <div className="trust-signal-card">
+              <div className="trust-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h4>Quality Assurance</h4>
+              <p>Standardized skills assessments and regular customer ratings audits.</p>
+            </div>
+
+            <div className="trust-signal-card">
+              <div className="trust-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+                </svg>
+              </div>
+              <h4>Project Completion Guarantee</h4>
+              <p>Verada matches a backup specialist if your assigned pro cannot complete the job.</p>
+            </div>
+
+            <div className="trust-signal-card">
+              <div className="trust-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-4 9H8V9h8v2zm0-4H8V5h8v2z"/>
+                </svg>
+              </div>
+              <h4>Verified Reviews</h4>
+              <p>Every review is tied to a completed transaction to prevent fraud.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -520,7 +590,7 @@ export default function LandingView({
       <section className="cta-banner">
         <div className="container cta-container">
           <h2>Ready to start your project?</h2>
-          <p>Join over 150 project managers and homeowners who trust Build_Trust for their structural and maintenance needs.</p>
+          <p>Join over 150 project managers and homeowners who trust Verada for their structural and maintenance needs.</p>
           <div className="cta-actions">
             <button className="btn btn-accent btn-large" onClick={onOpenPostJob}>Post a Job</button>
             <button className="btn btn-outline btn-large" onClick={() => setActiveView('search')}>Browse Workers</button>

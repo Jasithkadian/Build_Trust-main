@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BuildTrust Platform Stylesheet
-   Design Language: Deep Navy, Slate Blue, Safety Orange, Crisp Off-Whites
+   Verada Platform Stylesheet
+   Design Language: Dark Navy, Primary Blue, Light Blue, Crisp Off-Whites
    ========================================================================== */
 
 /* --- SKELETON LOADERS & PERFORMANCE --- */
@@ -38,7 +38,7 @@
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background-color: #ff6f00;
+  background-color: #007ACC;
   border-radius: 50%;
   animation: pulse 1.5s infinite ease-in-out;
 }
@@ -50,26 +50,26 @@
 
 /* 1. ROOT DESIGN TOKENS */
 :root {
-  --color-primary: #0a0e1a;      /* Ultra Premium Dark Slate Navy */
-  --color-secondary: #141b2d;    /* Slate Navy */
-  --color-accent: #ff6b2b;       /* Vibrant Safety Orange/Coral */
-  --color-accent-hover: #e05315;
-  --color-accent-light: #fff0ea;
-  --color-dark-highlight: #2c3a58;
-  --color-bg-light: #f8fafc;
-  --color-bg-dark: #0f172a;
+  --color-primary: #0D1117;      /* Ultra Premium Dark Slate Navy */
+  --color-secondary: #161B22;    /* Slate Navy */
+  --color-accent: #007ACC;       /* Vibrant Safety Orange/Coral */
+  --color-accent-hover: #1F6FEB;
+  --color-accent-light: #f0f6fc;
+  --color-dark-highlight: #21262d;
+  --color-bg-light: #F8FAFC;
+  --color-bg-dark: #0D1117;
   --color-white: #ffffff;
   
-  --color-success: #10b981;      /* Modern Emerald Green */
-  --color-success-light: #ecfdf5;
-  --color-danger: #ef4444;       /* Premium Coral Red */
-  --color-danger-light: #fef2f2;
-  --color-warning: #f59e0b;
+  --color-success: #2EA043;      /* Modern Emerald Green */
+  --color-success-light: #dafbe1;
+  --color-danger: #F85149;       /* Premium Coral Red */
+  --color-danger-light: #ffebe9;
+  --color-warning: #D29922;
   
-  --text-dark: #0f172a;
-  --text-light: #f8fafc;
-  --text-muted: #64748b;
-  --text-muted-light: #94a3b8;
+  --text-dark: #161B22;
+  --text-light: #F8FAFC;
+  --text-muted: #6E7681;
+  --text-muted-light: #8b949e;
   
   --shadow-sm: 0 2px 8px rgba(10, 14, 26, 0.04);
   --shadow-md: 0 10px 20px -4px rgba(10, 14, 26, 0.08);
@@ -95,11 +95,11 @@
   --card-border: 1px solid rgba(226, 232, 240, 0.8);
 
   /* AI REDESIGN TOKENS */
-  --color-brand-orange: #ff6b2b;
+  --color-brand-orange: #007ACC;
   --color-background-primary: #ffffff;
   --color-background-secondary: #f8fafc;
-  --color-text-primary: #0a0e1a;
-  --color-text-secondary: #64748b;
+  --color-text-primary: #161B22;
+  --color-text-secondary: #6E7681;
   --color-border-tertiary: #e2e8f0;
 }
 
@@ -205,7 +205,7 @@ button {
 .btn-accent:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
 }
 
 .btn-outline {
@@ -307,7 +307,7 @@ button {
 }
 
 .logo-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -422,7 +422,7 @@ button {
   width: 100%;
   height: 3px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, #1F6FEB 100%);
 }
 
 .nav-dropdown {
@@ -544,7 +544,7 @@ button {
   width: 60px;
   height: 4px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, #1F6FEB 100%);
   margin-top: 10px;
 }
 
@@ -570,7 +570,7 @@ button {
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-premium);
-  border-color: rgba(255, 107, 43, 0.4);
+  border-color: rgba(0, 122, 204, 0.4);
 }
 
 .service-card::before {
@@ -642,7 +642,7 @@ button {
 
 .value-item:hover {
   background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 107, 43, 0.2);
+  border-color: rgba(0, 122, 204, 0.2);
   transform: translateY(-2px);
 }
 
@@ -657,7 +657,7 @@ button {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.orange-bg { background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%); }
+.blue-bg { background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%); }
 .blue-bg { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
 .yellow-bg { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
 
@@ -720,7 +720,7 @@ button {
 .worker-card-flat:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-premium);
-  border-color: rgba(255, 107, 43, 0.25);
+  border-color: rgba(0, 122, 204, 0.25);
 }
 
 .worker-card-image {
@@ -1052,9 +1052,9 @@ button {
 }
 
 .step.active .step-num {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   color: var(--color-white);
-  box-shadow: 0 0 0 4px rgba(255, 107, 43, 0.25);
+  box-shadow: 0 0 0 4px rgba(0, 122, 204, 0.25);
   border-color: transparent;
 }
 .step.active .step-label {
@@ -1071,7 +1071,7 @@ button {
 }
 
 .step-line.active {
-  background: linear-gradient(90deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, #1F6FEB 100%);
 }
 
 .search-layout {
@@ -1132,7 +1132,7 @@ button {
 .form-input:focus, .form-select:focus {
   border-color: var(--color-accent);
   background-color: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(255, 107, 43, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.15);
 }
 
 .label-row {
@@ -1161,9 +1161,9 @@ button {
   width: 20px;
   height: 20px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(255, 107, 43, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 122, 204, 0.3);
   transition: transform var(--transition-fast);
   border: 2px solid var(--color-white);
 }
@@ -1218,9 +1218,9 @@ button {
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   border-color: transparent;
-  box-shadow: 0 2px 6px rgba(255, 107, 43, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 122, 204, 0.2);
 }
 
 .checkmark::after {
@@ -1293,7 +1293,7 @@ button {
 .worker-row-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(255, 107, 43, 0.25);
+  border-color: rgba(0, 122, 204, 0.25);
 }
 
 .worker-row-avatar {
@@ -1363,7 +1363,45 @@ button {
   font-weight: 600;
   padding: 4px 10px;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 107, 43, 0.15);
+  border: 1px solid rgba(0, 122, 204, 0.15);
+}
+
+.worker-verifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.verification-badge {
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.verification-badge.verified-aadhaar {
+  background-color: #dafbe1;
+  color: #2EA043;
+  border: 1px solid rgba(46, 160, 67, 0.2);
+}
+
+.verification-badge.verified-background {
+  background-color: #e6f4ff;
+  color: #007ACC;
+  border: 1px solid rgba(0, 122, 204, 0.2);
+}
+
+.verification-badge.verified-gst {
+  background-color: #fff8eb;
+  color: #D29922;
+  border: 1px solid rgba(210, 153, 34, 0.2);
 }
 
 .worker-desc {
@@ -1435,13 +1473,13 @@ button {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-size: 18px;
-  box-shadow: 0 2px 10px rgba(255, 107, 43, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 122, 204, 0.3);
 }
 
 .drawer-left h3 {
@@ -1711,7 +1749,7 @@ button {
   width: 100%;
   height: 3px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(90deg, var(--color-accent) 0%, #1F6FEB 100%);
 }
 
 .profile-tab-content {
@@ -1915,8 +1953,8 @@ button {
 }
 
 .user-avatar-large {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%) !important;
-  box-shadow: 0 4px 15px rgba(255, 107, 43, 0.25);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%) !important;
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.25);
 }
 
 /* 9. ADMIN DASHBOARD STYLING */
@@ -1956,7 +1994,7 @@ button {
   right: -15px;
   width: 30px;
   height: 30px;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1971,7 +2009,7 @@ button {
 
 .sidebar-toggle-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(255, 107, 43, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 122, 204, 0.3);
 }
 
 .admin-layout.sidebar-collapsed .admin-nav-item {
@@ -2024,11 +2062,11 @@ button {
 
 /* PREMIUM AI AGENT REDESIGN */
 :root {
-  --color-brand-orange: #FF6B2B;
+  --color-brand-orange: #007ACC;
   --color-background-primary: #ffffff;
   --color-background-secondary: #f8fafc;
-  --color-text-primary: #0b132b;
-  --color-text-secondary: #64748b;
+  --color-text-primary: #161B22;
+  --color-text-secondary: #6E7681;
   --color-border-tertiary: #e2e8f0;
 }
 
@@ -2254,7 +2292,7 @@ button {
 }
 
 .ai-estimate-header {
-  background: #FFF3ED;
+  background: #F0F6FC;
   padding: 10px 13px;
   display: flex;
   align-items: center;
@@ -2494,14 +2532,14 @@ button {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-size: 13px;
-  box-shadow: 0 2px 8px rgba(255, 107, 43, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
 }
 
 .admin-user-info h4 {
@@ -3098,7 +3136,7 @@ button {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 40% 30%, rgba(255, 107, 43, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 40% 30%, rgba(0, 122, 204, 0.22) 0%, transparent 40%),
     radial-gradient(circle at 25% 60%, rgba(239, 68, 68, 0.25) 0%, transparent 35%),
     radial-gradient(circle at 70% 75%, rgba(16, 185, 129, 0.18) 0%, transparent 40%);
   opacity: 0;
@@ -3816,7 +3854,7 @@ button {
 }
 
 .ai-option-chip:hover {
-  background: #FFF3ED;
+  background: #F0F6FC;
 }
 
 .ai-option-chip.something-else {
@@ -3899,7 +3937,7 @@ button {
   backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 107, 43, 0.08);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 122, 204, 0.08);
   width: 90%;
   max-width: 480px;
   overflow: hidden;
@@ -4010,7 +4048,7 @@ button {
 .auth-input:focus {
   border-color: var(--color-accent);
   background: rgba(10, 14, 26, 0.75);
-  box-shadow: 0 0 14px rgba(255, 107, 43, 0.25);
+  box-shadow: 0 0 14px rgba(0, 122, 204, 0.25);
 }
 
 .auth-input:focus + .auth-input-icon,
@@ -4051,14 +4089,14 @@ button {
 }
 
 .auth-btn-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   color: var(--color-white);
-  box-shadow: 0 4px 14px rgba(255, 107, 43, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 122, 204, 0.3);
 }
 
 .auth-btn-accent:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 43, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 122, 204, 0.45);
 }
 
 .auth-btn-accent:active {
@@ -4158,14 +4196,14 @@ button {
 }
 
 .auth-role-card.active {
-  background: rgba(255, 107, 43, 0.08);
+  background: rgba(0, 122, 204, 0.08);
   border-color: var(--color-accent);
-  box-shadow: 0 0 15px rgba(255, 107, 43, 0.15);
+  box-shadow: 0 0 15px rgba(0, 122, 204, 0.15);
 }
 
 .auth-role-icon {
   color: var(--color-accent);
-  background: rgba(255, 107, 43, 0.1);
+  background: rgba(0, 122, 204, 0.1);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -4216,7 +4254,7 @@ button {
 }
 
 .auth-btn-admin:hover {
-  background: rgba(255, 107, 43, 0.08);
+  background: rgba(0, 122, 204, 0.08);
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-1px);
@@ -4390,7 +4428,7 @@ button {
 /* Trust Metrics Strip */
 .stats-strip-landing {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  border-top: 1px solid rgba(255, 107, 43, 0.1);
+  border-top: 1px solid rgba(0, 122, 204, 0.1);
   border-bottom: 3px solid var(--color-accent);
   padding: 60px 0;
   color: var(--color-white);
@@ -4405,7 +4443,7 @@ button {
   left: -20%;
   width: 60%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 107, 43, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(0, 122, 204, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -4420,11 +4458,11 @@ button {
   font-family: var(--font-display);
   font-size: 42px;
   font-weight: 800;
-  background: linear-gradient(135deg, #ff8c5a 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, #58A6FF 0%, var(--color-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 6px;
-  text-shadow: 0 4px 12px rgba(255, 107, 43, 0.15);
+  text-shadow: 0 4px 12px rgba(0, 122, 204, 0.15);
 }
 
 .stat-card-landing p {
@@ -4435,11 +4473,64 @@ button {
   letter-spacing: 1px;
 }
 
+/* Trust Signals Section styling */
+.trust-signals-section {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+  text-align: center;
+}
+.trust-signals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.trust-signal-card {
+  background: var(--color-white);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  border: var(--card-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.trust-signal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 122, 204, 0.2);
+}
+.trust-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.trust-signal-card h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+.trust-signal-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* How It Works Section */
 .how-it-works {
   padding: 90px 24px;
   text-align: center;
-  background: radial-gradient(circle at top right, rgba(255, 107, 43, 0.03) 0%, transparent 45%),
+  background: radial-gradient(circle at top right, rgba(0, 122, 204, 0.03) 0%, transparent 45%),
               radial-gradient(circle at bottom left, rgba(20, 27, 45, 0.02) 0%, transparent 45%);
   border-radius: var(--radius-lg);
   margin-top: 20px;
@@ -4487,7 +4578,7 @@ button {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -4498,13 +4589,13 @@ button {
   position: relative;
   border: 4px solid var(--color-white);
   z-index: 3;
-  box-shadow: 0 4px 15px rgba(255, 107, 43, 0.35);
+  box-shadow: 0 4px 15px rgba(0, 122, 204, 0.35);
   transition: all var(--transition-normal);
 }
 
 .how-step-card:hover .step-badge {
   transform: scale(1.1) rotate(360deg);
-  box-shadow: 0 6px 20px rgba(255, 107, 43, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 122, 204, 0.5);
 }
 
 .how-step-card h4 {
@@ -4521,7 +4612,7 @@ button {
   line-height: 1.6;
 }
 
-/* Why Choose Build_Trust? (Features Grid) */
+/* Why Choose Verada? (Features Grid) */
 .features-section-landing {
   padding: 90px 24px;
   background: linear-gradient(135deg, rgba(241, 245, 249, 0.8) 0%, rgba(226, 232, 240, 0.4) 100%);
@@ -4569,15 +4660,15 @@ button {
 
 .feature-card-landing:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px rgba(255, 107, 43, 0.08);
-  border-color: rgba(255, 107, 43, 0.25);
+  box-shadow: 0 20px 35px rgba(0, 122, 204, 0.08);
+  border-color: rgba(0, 122, 204, 0.25);
 }
 
 .feature-icon-box {
   width: 60px;
   height: 60px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(255, 107, 43, 0.15) 100%);
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(0, 122, 204, 0.15) 100%);
   color: var(--color-accent);
   display: flex;
   align-items: center;
@@ -4587,10 +4678,10 @@ button {
 }
 
 .feature-card-landing:hover .feature-icon-box {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #1F6FEB 100%);
   color: var(--color-white);
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 8px 20px rgba(255, 107, 43, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 122, 204, 0.25);
 }
 
 .feature-card-landing h4 {
@@ -4632,14 +4723,14 @@ button {
 }
 
 .faq-item:hover {
-  border-color: rgba(255, 107, 43, 0.3);
+  border-color: rgba(0, 122, 204, 0.3);
   background: rgba(255, 240, 234, 0.15);
 }
 
 .faq-item.active {
   border-color: var(--color-accent);
   background: rgba(255, 240, 234, 0.25);
-  box-shadow: 0 10px 25px rgba(255, 107, 43, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 122, 204, 0.06);
 }
 
 .faq-question {
@@ -4669,7 +4760,7 @@ button {
   justify-content: center;
   border-radius: 50%;
   background: var(--color-accent-light);
-  box-shadow: 0 2px 8px rgba(255, 107, 43, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.1);
   transition: all var(--transition-normal);
 }
 
@@ -4677,7 +4768,7 @@ button {
   background: var(--color-accent);
   color: var(--color-white);
   transform: rotate(135deg);
-  box-shadow: 0 4px 12px rgba(255, 107, 43, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.3);
 }
 
 .faq-answer {
@@ -4793,7 +4884,7 @@ button {
   left: -10%;
   width: 50%;
   height: 50%;
-  background: radial-gradient(circle, rgba(255, 107, 43, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 122, 204, 0.15) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 1;
@@ -4813,7 +4904,7 @@ button {
 
 /* Standalone styling adjustments for page rendering vs modal */
 .auth-page-container .auth-card {
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 80px rgba(255, 107, 43, 0.1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 80px rgba(0, 122, 204, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(20, 27, 45, 0.85);
   backdrop-filter: blur(32px) saturate(180%);
@@ -4860,7 +4951,7 @@ button {
   background: rgba(20, 27, 45, 0.98);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-premium), 0 0 40px rgba(255, 107, 43, 0.05);
+  box-shadow: var(--shadow-premium), 0 0 40px rgba(0, 122, 204, 0.05);
   padding: 36px 30px;
   color: var(--color-white);
 }
@@ -4913,7 +5004,7 @@ button {
   display: inline-block;
   font-size: 11px;
   color: var(--color-accent);
-  background-color: rgba(255, 107, 43, 0.1);
+  background-color: rgba(0, 122, 204, 0.1);
   padding: 5px 12px;
   border-radius: var(--radius-full);
   margin-bottom: 24px;
@@ -4994,7 +5085,7 @@ button {
 .widget-select:focus, .widget-input:focus {
   border-color: var(--color-accent);
   background: rgba(10, 14, 26, 0.75);
-  box-shadow: 0 0 14px rgba(255, 107, 43, 0.25);
+  box-shadow: 0 0 14px rgba(0, 122, 204, 0.25);
 }
 
 .widget-input-icon-wrapper {
@@ -5077,12 +5168,12 @@ button {
 .explore-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(255, 107, 43, 0.2);
+  border-color: rgba(0, 122, 204, 0.2);
 }
 
 .explore-icon-box {
   margin-bottom: 20px;
-  background-color: rgba(255, 107, 43, 0.05);
+  background-color: rgba(0, 122, 204, 0.05);
   width: 56px;
   height: 56px;
   border-radius: 12px;
@@ -5233,7 +5324,7 @@ button {
 
 .reserve-input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 8px rgba(255, 107, 43, 0.15);
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.15);
 }
 
 .reserve-next-btn {
@@ -5255,7 +5346,7 @@ button {
 
 .benefit-icon {
   font-size: 18px;
-  background-color: rgba(255, 107, 43, 0.08);
+  background-color: rgba(0, 122, 204, 0.08);
   color: var(--color-accent);
   width: 42px;
   height: 42px;

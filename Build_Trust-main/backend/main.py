@@ -24,7 +24,7 @@ from app.schemas import (
     LoginPasswordRequest, RegisterRequest
 )
 
-app = FastAPI(title="Build_Trust CRM API")
+app = FastAPI(title="Verada CRM API")
 
 # Rate Limiting
 ai_rate_limits = defaultdict(list)
@@ -35,7 +35,7 @@ RATE_LIMIT_WINDOW_SECONDS = 3600
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://buildtrust-marketplace.vercel.app",
+        "https://verada-marketplace.vercel.app",
         "http://localhost:8000",
         "http://127.0.0.1:8000"
     ],
@@ -65,7 +65,7 @@ async def admin_bypass_middleware(request: Request, call_next):
             body = await request.json()
             email = body.get("email", "").lower().strip()
             password = body.get("password", "")
-            if email == "admin@buildtrust.com" and password == "1234@":
+            if email == "admin@verada.com" and password == "1234@":
                 log("🚨 MIDDLEWARE: Admin bypass triggered!")
                 token = auth_service.create_access_token(email)
                 return JSONResponse(content={"status": "success", "token": token, "user": {"email": email, "role": "admin", "name": "Vikram Singh"}})
@@ -76,14 +76,14 @@ async def admin_bypass_middleware(request: Request, call_next):
 
 @app.on_event("startup")
 async def startup_diagnostics():
-    log("🚀 BUILD_TRUST BACKEND ONLINE (PORT 8005)")
+    log("🚀 VERADA BACKEND ONLINE (PORT 8005)")
 
 # --- AUTHENTICATION ---
 
 @app.post("/api/auth/check-email")
 async def check_email(request: CheckEmailRequest):
     email = request.email.lower().strip()
-    if email == "admin@buildtrust.com": return {"exists": True, "role": "admin"}
+    if email == "admin@verada.com": return {"exists": True, "role": "admin"}
     local_user = user_db.get_user(email)
     if local_user: return {"exists": True, "role": local_user.get("role", "customer")}
     if not dataverse_service.configured: return {"exists": False}
@@ -131,7 +131,7 @@ async def register_user(request: RegisterRequest):
 @app.post("/api/auth/send-otp")
 async def send_otp(request: OtpRequest):
     email = request.email.lower().strip()
-    if email == "admin@buildtrust.com": return {"status": "error", "message": "Use password."}
+    if email == "admin@verada.com": return {"status": "error", "message": "Use password."}
     try:
         await auth_service.generate_otp(email)
         return {"status": "success"}
@@ -216,7 +216,7 @@ async def ai_agent_chat(request: Request, payload: dict):
     history = payload.get("messages", [])
     
     system_content = """
-    You are the Build_Trust Premium Project Manager. Your mission is to scope construction projects.
+    You are the Verada Premium Project Manager. Your mission is to scope construction projects.
     STRICT PROTOCOL:
     1. Collect Project Size (e.g. sq ft), Material Quality, and Work Type.
     2. Ask ONE technical question at a time.
@@ -265,7 +265,7 @@ async def ai_agent_chat(request: Request, payload: dict):
 
 @app.get("/")
 async def root():
-    return {"message": "Build_Trust API is LIVE", "port": 8005}
+    return {"message": "Verada API is LIVE", "port": 8005}
 
 if __name__ == "__main__":
     import uvicorn

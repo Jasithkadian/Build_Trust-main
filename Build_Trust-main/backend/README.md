@@ -1,8 +1,8 @@
 ---
 title: buildtrust-marketplace-backend
 emoji: 🏗️
-colorFrom: orange
-colorTo: gray
+colorFrom: blue
+colorTo: purple
 sdk: docker
 app_port: 7860
 pinned: false

@@ -166,7 +166,7 @@ export default function App() {
     setAiStep(1);
     setAiChips([]);
     setShowAiInput(false);
-    setAiChatMessages([{ role: "assistant", content: "Namaste! I am the Build_Trust Project Manager. What kind of construction or repair work do you need today?" }]);
+    setAiChatMessages([{ role: "assistant", content: "Namaste! I am the Verada Project Manager. What kind of construction or repair work do you need today?" }]);
     setActiveModal('ai');
   };
 
@@ -801,11 +801,11 @@ export default function App() {
       console.warn("RESCUE BYPASS: Entering Admin Mode manually.");
       const mockData = {
         token: "rescue_token_" + Date.now(),
-        user: { email: 'admin@buildtrust.com', role: 'admin', name: 'Vikram Singh (Rescue)' }
+        user: { email: 'admin@verada.com', role: 'admin', name: 'Vikram Singh (Rescue)' }
       };
       loginSuccess(mockData);
     };
-    console.log("%c Build_Trust Debug: If Admin Login fails, type 'rescueAdmin()' in this console.", "color: #ff6f00; font-weight: bold; font-size: 14px;");
+    console.log("%c Verada Debug: If Admin Login fails, type 'rescueAdmin()' in this console.", "color: #ff6f00; font-weight: bold; font-size: 14px;");
   }, []);
 
   return (
@@ -1106,7 +1106,7 @@ export default function App() {
                       </div>
                     </div>
                     <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '15px' }}>
-                      🔒 Secure 256-bit encrypted transaction via BuildTrust Pay.
+                      🔒 Secure 256-bit encrypted transaction via Verada Pay.
                     </p>
                   </div>
                   <div className="wizard-footer">
@@ -1190,7 +1190,7 @@ export default function App() {
                 </svg>
               </div>
               <div className="header-info">
-                <div className="header-name">Build_Trust</div>
+                <div className="header-name">Verada</div>
                 <div className="header-status">Online · responds instantly</div>
               </div>
               <button className="close-modal-btn" onClick={() => setActiveModal(null)} style={{ color: 'var(--color-text-secondary)' }}>&times;</button>

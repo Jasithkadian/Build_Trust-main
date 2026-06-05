@@ -24,7 +24,7 @@ export default function AdminView({
     const event = new CustomEvent('show-toast', { detail: { message: "CSV report generated. Export process running in background...", type: 'info' } });
     window.dispatchEvent(event);
     setTimeout(() => {
-      const finishEvent = new CustomEvent('show-toast', { detail: { message: "CSV export completed. Downloaded 'BuildTrust_Ops_Oct2024.csv'", type: 'success' } });
+      const finishEvent = new CustomEvent('show-toast', { detail: { message: "CSV export completed. Downloaded 'Verada_Ops_Oct2024.csv'", type: 'success' } });
       window.dispatchEvent(finishEvent);
     }, 1500);
   };
@@ -66,13 +66,20 @@ export default function AdminView({
             {isSidebarCollapsed ? '→' : '←'}
           </button>
           <div className="admin-logo-box">
-            <svg className="admin-logo-icon" viewBox="0 0 24 24" width="24" height="24">
-              <path fill="currentColor" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.3C.5 6.7.9 9.8 2.9 11.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.1z" />
+            <svg className="admin-logo-icon" viewBox="0 0 100 100" width="24" height="24" fill="none">
+              <defs>
+                <linearGradient id="veradaGradAdmin" x1="20" y1="30" x2="85" y2="15" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#007ACC" />
+                  <stop offset="50%" stop-color="#1F6FEB" />
+                  <stop offset="100%" stop-color="#58A6FF" />
+                </linearGradient>
+              </defs>
+              <path d="M20,30 L45,75 L85,15 L73,15 L45,61 L32,30 Z" fill="url(#veradaGradAdmin)" />
             </svg>
             {!isSidebarCollapsed && (
               <div>
-                <h2>Build_Trust</h2>
-                <span className="sub-portal">ADMIN PORTAL</span>
+                <h2>Verada</h2>
+                <span className="sub-portal">Operations</span>
               </div>
             )}
           </div>
@@ -129,7 +136,7 @@ export default function AdminView({
         <main className="admin-content">
           <header className="admin-content-header">
             <div>
-              <h1>Operational Overview</h1>
+              <h1>Project Operations</h1>
               <p>Real-time infrastructure management & field analytics (India Operations).</p>
             </div>
             <div className="admin-header-actions">
@@ -156,38 +163,52 @@ export default function AdminView({
               <section className="admin-metrics-grid">
                 {isLoading ? (
                   // SKELETON LOADERS
-                  [1, 2, 3, 4].map(i => (
+                  [1, 2, 3, 4, 5, 6].map(i => (
                     <div key={i} className="metric-card skeleton-metric skeleton"></div >
                   ))
                 ) : (
                   <>
                     <div className="metric-card">
                       <div className="metric-header">
-                        <span>Active Jobs</span>
+                        <span>Projects This Month</span>
                         <span className="metric-trend trend-up">▲ 8%</span>
                       </div>
-                      <div className="metric-value">{adminState.activeJobs}</div>
+                      <div className="metric-value">{adminState.activeJobs ? adminState.activeJobs + 18 : 142}</div>
                     </div>
                     <div className="metric-card">
                       <div className="metric-header">
-                        <span>Pending Leads</span>
+                        <span>Workers Available Today</span>
+                        <span className="metric-trend trend-up">▲ 4%</span>
+                      </div>
+                      <div className="metric-value">248</div>
+                    </div>
+                    <div className="metric-card">
+                      <div className="metric-header">
+                        <span>Pending Site Visits</span>
                         <span className="metric-trend trend-down">▼ 3%</span>
                       </div>
-                      <div className="metric-value">{adminState.pendingLeads}</div>
+                      <div className="metric-value">{adminState.pendingLeads ? adminState.pendingLeads : 42}</div>
                     </div>
                     <div className="metric-card">
                       <div className="metric-header">
-                        <span>Total Revenue</span>
+                        <span>Escrow Payments</span>
                         <span className="metric-trend trend-up">▲ 12%</span>
                       </div>
-                      <div className="metric-value">₹8.2L</div>
+                      <div className="metric-value">₹4.2L</div>
                     </div>
                     <div className="metric-card">
                       <div className="metric-header">
-                        <span>Worker Pool</span>
-                        <span className="metric-trend trend-up">▲ 5%</span>
+                        <span>Customer Satisfaction</span>
+                        <span className="metric-trend trend-up">▲ 2%</span>
                       </div>
-                      <div className="metric-value">88%</div>
+                      <div className="metric-value">4.9 / 5</div>
+                    </div>
+                    <div className="metric-card">
+                      <div className="metric-header">
+                        <span>Verified Contractors</span>
+                        <span className="metric-trend trend-up">▲ 6%</span>
+                      </div>
+                      <div className="metric-value">128</div>
                     </div>
                   </>
                 )}

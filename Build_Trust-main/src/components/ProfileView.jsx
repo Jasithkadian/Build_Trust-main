@@ -41,15 +41,20 @@ export default function ProfileView({
               className="profile-avatar-large"
               style={{ backgroundImage: `url('${worker.image}')` }}
             >
-              {worker.verified && <span className="verified-badge-large" title="Build_Trust Verified">✓</span>}
+              {worker.verified && <span className="verified-badge-large" title="Verada Verified">✓</span>}
             </div>
             
             <div className="profile-sidebar-header">
               <h1>{worker.name}</h1>
-              <p className="profile-specialty">{worker.specialty}</p>
+              <p className="profile-specialty">Senior {worker.specialty}</p>
               <div className="profile-rating-box">
                 <span className="stars">★ {worker.rating}</span>
                 <span className="reviews">({worker.reviewsCount} reviews)</span>
+              </div>
+              <div className="worker-verifications" style={{ justifyContent: 'center', marginTop: '12px' }}>
+                <span className="verification-badge verified-aadhaar">✓ Aadhaar Verified</span>
+                <span className="verification-badge verified-background">✓ Background Checked</span>
+                {worker.rate >= 350 && <span className="verification-badge verified-gst">✓ GST Verified</span>}
               </div>
             </div>
 

@@ -106,7 +106,7 @@ export default function WorkerDashboardView({
             <div className="settings-form" style={{ maxWidth: '600px' }}>
               <div className="form-group">
                 <label className="form-label">Professional Bio</label>
-                <textarea className="form-input" rows="4" defaultValue={`I am a professional specialist with over ${stats.completedJobs} successful projects on Build_Trust.`}></textarea>
+                <textarea className="form-input" rows="4" defaultValue={`I am a professional specialist with over ${stats.completedJobs} successful projects on Verada.`}></textarea>
               </div>
               <div className="form-row">
                 <div className="form-group flex-1">

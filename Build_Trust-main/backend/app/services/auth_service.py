@@ -86,9 +86,9 @@ class AuthService:
         if self.email_configured:
             try:
                 params = {
-                    "from": "Build_Trust <verify@kurianjose.me>", 
+                    "from": "Verada <verify@kurianjose.me>", 
                     "to": email,
-                    "subject": f"{code} is your Build_Trust verification code",
+                    "subject": f"{code} is your Verada verification code",
                     "html": f"""
                     <!DOCTYPE html>
                     <html>
@@ -121,7 +121,7 @@ class AuthService:
                                         <!-- Footer -->
                                         <tr>
                                             <td style="padding: 24px 40px; background-color: #f8fafc; border-top: 1px solid #edf2f7; text-align: center;">
-                                                <p style="margin: 0; font-size: 12px; color: #a0aec0;">&copy; 2026 Build_Trust India. All rights reserved.</p>
+                                                <p style="margin: 0; font-size: 12px; color: #a0aec0;">&copy; 2026 Verada India. All rights reserved.</p>
                                                 <p style="margin: 8px 0 0 0; font-size: 11px; color: #cbd5e1;">Infrastructure managed by Kurian Jose Enterprise Systems</p>
                                             </td>
                                         </tr>

@@ -22,8 +22,8 @@ class OpenRouterService:
 
         headers = {
             "Authorization": f"Bearer {self.api_key}",
-            "HTTP-Referer": "https://buildtrust.me",
-            "X-Title": "Build_Trust CRM",
+            "HTTP-Referer": "https://verada.me",
+            "X-Title": "Verada CRM",
             "Content-Type": "application/json"
         }
 

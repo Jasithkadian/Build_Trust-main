@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="veradaFavGrad" x1="20" y1="30" x2="85" y2="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#007ACC" />
+      <stop offset="50%" stop-color="#1F6FEB" />
+      <stop offset="100%" stop-color="#58A6FF" />
+    </linearGradient>
+  </defs>
+  <path d="M20,30 L45,75 L85,15 L73,15 L45,61 L32,30 Z" fill="url(#veradaFavGrad)" />
+</svg>

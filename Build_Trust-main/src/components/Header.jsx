@@ -47,7 +47,7 @@ export default function Header({
       <div className="header-container">
         <div className="header-left">
           <Link to="/" className="logo">
-            <span className="logo-bold">Build</span><span className="logo-accent">_Trust</span>
+            <img src="/assets/images/logo_full_light.svg" alt="Verada Logo" style={{ height: '32px' }} />
           </Link>
           
           <div 
@@ -210,9 +210,9 @@ export default function Header({
     <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-content">
           <div className="mobile-drawer-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-            <span className="logo-bold" style={{ color: 'var(--color-white)', fontSize: '20px', fontFamily: 'var(--font-display)', fontWeight: 800 }}>
-              Build<span className="logo-accent">_Trust</span>
-            </span>
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="/assets/images/logo_full_dark.svg" alt="Verada Logo" style={{ height: '28px' }} />
+            </Link>
             <button 
               className="mobile-drawer-close" 
               onClick={() => setMobileMenuOpen(false)}

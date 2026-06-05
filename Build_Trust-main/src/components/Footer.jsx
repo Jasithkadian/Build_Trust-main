@@ -15,18 +15,18 @@ export default function Footer({ setActiveView }) {
                 e.preventDefault();
                 setActiveView('home');
               }}>
-                <span className="logo-light">Build</span><span className="logo-accent">_Trust</span>
+                <img src="/assets/images/logo_full_dark.svg" alt="Verada Logo" style={{ height: '32px' }} />
               </a>
             </div>
             <p className="footer-desc">
-              India's premier marketplace connecting verified skilled construction specialists and contractors with project managers and homeowners.
+              Verada helps homeowners, contractors, and project managers connect with verified construction professionals through transparent pricing, trusted reviews, and secure payments.
             </p>
             <div className="footer-contact-info">
               <div className="contact-detail-item">
                 <svg viewBox="0 0 24 24" width="16" height="16">
                   <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                <span>contact@buildtrust.in</span>
+                <span>contact@verada.in</span>
               </div>
               <div className="contact-detail-item">
                 <svg viewBox="0 0 24 24" width="16" height="16">
@@ -84,7 +84,7 @@ export default function Footer({ setActiveView }) {
         {/* Bottom Section: Copyright & Socials */}
         <div className="footer-bottom">
           <span className="copyright">
-            © 2026 Build_Trust Marketplace. All rights reserved.
+            © 2026 Verada Marketplace. All rights reserved.
           </span>
           <div className="footer-socials">
             <a href="#" className="social-icon" title="Share" onClick={(e) => e.preventDefault()}>
