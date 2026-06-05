@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8005' : '';
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+  ? 'http://localhost:8005' 
+  : (import.meta.env.VITE_API_URL || '');
 
 export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose }) {
   const [mode, setMode] = useState(initialMode); // 'login', 'signup', 'otp'

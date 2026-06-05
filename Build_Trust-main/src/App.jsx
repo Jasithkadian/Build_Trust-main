@@ -19,7 +19,9 @@ import { initialWorkers, initialAdminState } from './data/mockData';
 const ORIGINAL_FETCH = window.fetch;
 window.fetch = (url, options) => {
   if (typeof url === 'string' && url.startsWith('http://localhost:8005')) {
-    const apiBase = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8005' : '';
+    const apiBase = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+      ? 'http://localhost:8005' 
+      : (import.meta.env.VITE_API_URL || '');
     url = url.replace('http://localhost:8005', apiBase);
   }
   return ORIGINAL_FETCH(url, options);
