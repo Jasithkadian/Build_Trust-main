@@ -15,6 +15,16 @@ import AuthCard from './components/AuthCard';
 
 import { initialWorkers, initialAdminState } from './data/mockData';
 
+// Dynamic API routing interceptor for localhost vs production (Vercel)
+const ORIGINAL_FETCH = window.fetch;
+window.fetch = (url, options) => {
+  if (typeof url === 'string' && url.startsWith('http://localhost:8005')) {
+    const apiBase = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8005' : '';
+    url = url.replace('http://localhost:8005', apiBase);
+  }
+  return ORIGINAL_FETCH(url, options);
+};
+
 // Wrapper to handle ProfileView with URL params
 function ProfileViewWrapper({ 
   workers, 

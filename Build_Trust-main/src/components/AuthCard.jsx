@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://localhost:8005' : '';
+
 export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose }) {
   const [mode, setMode] = useState(initialMode); // 'login', 'signup', 'otp'
   const [email, setEmail] = useState('');
@@ -36,7 +38,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
     }
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8005/api/auth/login-password', {
+      const res = await fetch(`${API_BASE}/api/auth/login-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: cleanEmail, password })
@@ -64,7 +66,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
     }
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8005/api/auth/register', {
+      const res = await fetch(`${API_BASE}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -97,7 +99,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
     }
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8005/api/auth/send-otp', {
+      const res = await fetch(`${API_BASE}/api/auth/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: cleanEmail })
@@ -127,7 +129,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
     }
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8005/api/auth/verify-otp', {
+      const res = await fetch(`${API_BASE}/api/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: cleanEmail, code: otpCode })
@@ -135,7 +137,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
       const data = await res.json();
       if (res.ok && data.status === 'success') {
         // Check if user profile is already registered
-        const checkRes = await fetch('http://localhost:8005/api/auth/check-email', {
+        const checkRes = await fetch(`${API_BASE}/api/auth/check-email`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: cleanEmail })
@@ -163,7 +165,7 @@ export default function AuthCard({ initialMode = 'login', onAuthSuccess, onClose
   const handleAdminShortcut = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8005/api/auth/login-password', {
+      const res = await fetch(`${API_BASE}/api/auth/login-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: 'admin@buildtrust.com', password: '1234@' })

@@ -1,0 +1,35 @@
+# Dev artifacts
+node_modules
+dist
+.env
+.vercel
+
+# Python environments and caches
+venv
+backend/venv
+__pycache__
+backend/__pycache__
+api/__pycache__
+*.pyc
+
+# Diagnostic / helper scripts not needed in production
+backend/inspect_all_tables.py
+backend/inspect_schema.py
+backend/find_collection_names.py
+backend/list_models.py
+backend/send_sample_email.py
+backend/migrate.py
+backend/agent_poc.py
+backend/local_users.json
+
+# Large datasets / CSVs
+*.csv
+*.xlsx
+*.zip
+*.tar.gz
+*.json.example
+
+# IDE settings
+.vscode
+.idea
+.git
